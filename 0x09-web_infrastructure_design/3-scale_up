@@ -1,0 +1,44 @@
+README: Application Server vs. Web Server
+
+In this project, we'll explore the concepts of application servers and web servers by designing a simple infrastructure using one server, a load balancer (HAproxy) configured as a cluster, and splitting components like the web server, application server, and database onto their own servers.
+
+Infrastructure Overview:
+
+One Server:
+
+We start with a single server that will host various components of our application.
+Load Balancer (HAproxy) Cluster:
+
+We configure two HAproxy load balancers to work together as a cluster.
+Load balancers distribute incoming requests among multiple servers to ensure balanced workloads and redundancy.
+Web Server:
+
+A separate server hosts the web server component.
+The web server handles HTTP requests, serves static content, and forwards dynamic requests to the application server.
+Application Server:
+
+Another distinct server houses the application server component.
+The application server processes dynamic requests, performs application-specific logic, and generates responses.
+Database Server:
+
+Our infrastructure includes a database server that stores and manages data.
+The database contains information like user accounts, posts, and other application data.
+Why These Elements are Added:
+
+Load Balancer Cluster:
+
+The load balancer cluster enhances reliability and performance by distributing traffic among multiple servers. It also provides redundancy in case one load balancer fails.
+Separate Web and Application Servers:
+
+Splitting web and application servers ensures better resource management and scalability. The web server handles content delivery, while the application server processes business logic, enhancing overall efficiency.
+Explanation of Application Server vs. Web Server:
+
+Application Server:
+
+The application server focuses on executing application-specific logic. It's responsible for tasks like user authentication, database interactions, and generating dynamic content.
+Web Server:
+
+The web server serves as an intermediary between users and the application server. It handles static content delivery, such as images and stylesheets, and forwards dynamic requests to the application server.
+Conclusion:
+
+In this project, we've set up an infrastructure that utilizes separate servers for the web server, application server, and database. The load balancer cluster ensures efficient distribution of user requests, while the distinction between application and web servers enhances scalability and performance.

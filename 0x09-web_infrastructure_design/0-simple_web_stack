@@ -1,0 +1,47 @@
+Imagine someone wants to visit a website called www.foobar.com. Let's break down how this works:
+
+User Wants the Website:
+
+So, picture a person typing "www.foobar.com" into their web browser.
+Domain Name and DNS:
+
+To make this magic happen, the name "foobar.com" is like the address of the website.
+This "address" is registered with a special system called DNS, like a phonebook for websites.
+We tell DNS that "www.foobar.com" should take you to a server with the number 8.8.8.8.
+Server:
+
+The server is like the big computer that holds the website stuff.
+It's the place where all the website's pieces come together.
+Web Server (Nginx):
+
+Nginx, the web server, is like the friendly face at the entrance of a store.
+It welcomes you and checks what you're looking for.
+Application Server:
+
+The application server is the clever part that makes the website work.
+It takes the requests from the friendly face (web server), does the thinking, and prepares the right stuff to show you.
+Application Files (Code Base):
+
+Think of these files as the building blocks of the website.
+They have all the instructions on how the website should look and what it should do.
+Database (MySQL):
+
+The database is like a super organized storage room for website information.
+It keeps stuff like user accounts, posts, and comments neatly organized.
+Talking to Users:
+
+The server chats with your computer using a special language called HTTP or HTTPS.
+When you click around the website, your browser and the server have a chat to show you the right stuff.
+Challenges with this Setup:
+
+One Weak Point:
+
+Since everything relies on this single server, any hiccups with it could break the website.
+Pause for Fixes:
+
+When we need to fix things or put in new code, the web server has to take a quick nap.
+During this nap, the website might not be available, causing a tiny break.
+Can't Handle a Crowd:
+
+If lots of people show up to the website, this single server might feel overwhelmed.
+It's like a small car trying to carry too many passengers.
