@@ -1,0 +1,53 @@
+Three-Server Web Infrastructure for www.foobar.com:
+
+User Accesses the Website:
+
+A user enters "www.foobar.com" in their browser.
+Domain Name and DNS:
+
+The domain "foobar.com" is registered and managed with DNS.
+DNS includes an "A" record for "www.foobar.com" pointing to the IP addresses of the two servers.
+Load Balancer (HAproxy):
+
+To handle traffic efficiently, a load balancer (HAproxy) distributes incoming requests between the two servers.
+This helps prevent overload on a single server, ensuring better performance.
+Web Server (Nginx):
+
+Nginx, the web server, receives user requests and serves static content.
+It forwards dynamic requests to the application server.
+Application Server:
+
+The application server processes dynamic requests.
+It contains the application's logic and generates responses.
+Additional server is added to handle traffic spikes or redundancy.
+Set of Application Files (Code Base):
+
+Application files hold the code for the website.
+They encompass HTML, CSS, JavaScript, and any server-side code.
+Database (MySQL):
+
+MySQL is the database server storing and managing data.
+It holds user info, posts, and other site data.
+Database Primary-Replica Cluster:
+
+A Primary-Replica (Master-Slave) cluster has a primary (master) and a replica (slave) database.
+The primary handles write operations, while the replica helps with read operations and acts as a backup.
+Explanations for Additional Elements:
+
+Two Servers: We add a second server to improve performance and redundancy.
+Load Balancer: The load balancer balances traffic for better performance and prevents overloading a single server.
+Load Balancer Distribution Algorithm:
+
+The load balancer is configured with a Round Robin distribution algorithm. It sends each new request to the next server in line, ensuring an even distribution of traffic.
+Active-Active vs. Active-Passive Setup:
+
+This setup is Active-Active, as both servers handle traffic simultaneously. Active-Passive would involve one server being active while the other serves as a backup, only taking over if the active server fails.
+Database Primary-Replica Cluster:
+
+The primary node handles write operations (adding data), while the replica node assists with read operations (fetching data).
+Replication ensures data redundancy and backup.
+Issues with this Infrastructure:
+
+Single Point of Failure (SPOF): Each server could become a single point of failure if it goes down.
+Security Issues: No firewall poses security risks, and not using HTTPS can expose user data.
+No Monitoring: Without monitoring, we can't detect performance issues or downtime promptly.
