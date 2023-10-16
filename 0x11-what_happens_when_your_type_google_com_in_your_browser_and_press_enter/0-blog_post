@@ -1,0 +1,52 @@
+What's a Server?
+
+A server is like a helpful computer or program. It does tasks for other programs and their users, called clients. Think of it as a waiter in a restaurant.
+The Client-Server Model
+
+The client is the one asking for things. It's usually your internet-connected device, like a computer or phone, and the software you use to access the web, such as Google Chrome. In this example, the client is like you ordering food in a restaurant.
+The server is the one providing what the client asked for. It stores websites and apps. In our example, it's like the kitchen in the restaurant making your food.
+When your device wants to see a webpage, it asks the server for a copy of that webpage, which is then shown on your web browser, just like the waiter brings your meal to your table.
+The Phonebook of the Internet
+
+When you type a web address like "https://www.google.com" in your browser, the first thing your browser does is figure out where to find that website. It needs something like a phonebook for the internet.
+What's a URL?
+
+A URL is like an address for a website. It has parts like the protocol (https://), the hostname (www.google.com), and more. In our case, we're looking at the protocol and hostname. It's similar to knowing the street name and the building number to find a place.
+DNS (Domain Name System)
+
+DNS is like the internet's phonebook. It translates human-friendly website names into machine-friendly IP addresses. Every device on the internet has a unique IP address, and DNS helps your device find the right one.
+The process of DNS involves several steps and servers, like asking for directions:
+First, your request goes to a server called the DNS recursor.
+If that server doesn't know the exact location, it asks a root server for clues.
+The root server points to the right place, like telling you which city to go to.
+The final server, called the authoritative nameserver, knows exactly where to find the website's IP address.
+Internet Protocol Suite
+
+Now that your browser knows where to find a website, it's time to connect. Browsers use protocols to make this happen.
+One of the most common protocols is TCP/IP, which ensures data is sent correctly over the internet. It's like following the rules to send and receive messages or packages.
+Traffic and Security Control
+
+Once your browser connects, it's time to send and receive data. But before that, there's traffic control.
+Load balancers, like traffic cops, make sure web traffic is distributed evenly among different servers to avoid overloading any single one.
+Firewalls act as security guards, deciding who can enter and who can't. They have rules like checking IDs to keep things safe.
+SSL (Secure Socket Layer)
+
+Security is crucial, especially when sharing sensitive information. SSL is like a secret code between your device and a website to keep your conversation private. It's vital when sharing things like credit card details.
+HTTP/HTTPS
+
+HTTP is like the language your browser uses to talk to a web server when you ask for something.
+HTTPS is just like HTTP, but with extra security. It's like making sure your message is sent in a sealed envelope, keeping it safe from prying eyes.
+HTTP Requests and Response Status Codes
+
+Whenever you ask for something on a website, it's like sending a request. The website's response tells you if it worked or not, similar to getting a message back from your request.
+Web and Application Servers
+
+Web servers are like chefs in a restaurant. They serve static content, such as web pages and images. These are things that don't change much.
+However, many websites have dynamic content that changes, like interactive features. For this, we need application servers. They handle these dynamic tasks.
+Database
+
+Databases are like digital libraries that store information. The database server is the librarian who retrieves, adds, and updates data.
+There are different types of databases, like relational databases (think traditional libraries) and non-relational databases (more like digital archives).
+Conclusion
+
+All of these steps happen quickly, even before you notice when you type a website address. I hope this simplified explanation helps you understand what happens when you visit a website like www.google.com. It's like a well-organized process that ensures you get the information you want from the internet.
